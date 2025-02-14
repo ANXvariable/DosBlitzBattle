@@ -4,5 +4,5 @@ active = 0
 alarm[0] = 5
 continue_str = get_text("GameOver", "Continue")
 exit_str = get_text("GameOver", "Exit")
-spectate_str = "Spectate"
+spectate_str = "Respawn"
 event_user(0)

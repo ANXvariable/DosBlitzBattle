@@ -188,4 +188,3 @@ global.receiving = 0
 beginReceiveTimer = 300
 global.samsAlive = 0
 global.samsAlpha = 0
-canScrew = 0
