@@ -30,7 +30,10 @@ if (global.saxmode && (!global.sax))
     global.spectatorOption = 1
 if (global.spectatorOption && global.lobbyLocked)
 {
-    global.spectator = 1
+    if (global.lavastate <= 10)
+        global.spectator = 0
+    else
+        global.spectator = 1
     global.spectatorIndex = -1
 }
 if global.saxmode

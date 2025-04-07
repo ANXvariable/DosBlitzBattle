@@ -1,6 +1,9 @@
 if (global.lobbyLocked && global.lastroom != 2)
 {
-    global.spectator = 1
+    if (global.lavastate <= 10)
+        global.spectator = 0
+    else
+        global.spectator = 1
     global.spectatorIndex = -1
     if global.sax
     {
@@ -15,5 +18,3 @@ if (global.newgame == 1)
     start_new_game()
 else
     load_game(((working_directory + "/multitroid/save") + string((global.saveslot + 1))))
-global.spectator = 0
-global.spectatorIndex = -1
