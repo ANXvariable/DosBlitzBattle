@@ -89,7 +89,8 @@ if (ds_list_size(playerList) > 0 && ds_list_size(resetList) > 0)
     }
 }
 dt = (delta_time / 1000000)
-ds_list_clear(deadList)
+if (!global.lobbyLocked || (global.metdead[43] && global.metdead[44] && global.metdead[45]))
+    ds_list_clear(deadList)
 if (global.lobbyLocked && global.doomenabled)
 {
     doomframes = (global.doomtime * 3600)
