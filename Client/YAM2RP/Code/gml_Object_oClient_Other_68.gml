@@ -2120,6 +2120,14 @@ switch type_event
                 if (instance_exists(oMapCursor) && surface_exists(oSS_Control.s_map))
                     surface_free(oSS_Control.s_map)
                 break
+            case 71:
+                global.saveEndChecker = buffer_read(_buffer, buffer_u8)
+                if (global.saveEndChecker == 2)
+                {
+                    popup_text("debug")
+                    global.saveEndChecker = 0
+                }
+                break
         }
 }
 
