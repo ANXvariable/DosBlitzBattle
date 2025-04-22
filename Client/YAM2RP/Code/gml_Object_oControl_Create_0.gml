@@ -491,3 +491,4 @@ global.pingRange = 0
 global.grayMap = 0
 global.canScrewMulti = 0
 global.saveEndChecker = 0
+global.totalDeaths = 0

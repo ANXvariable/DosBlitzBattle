@@ -1,3 +1,4 @@
+var kilBfr;
 if (global.playerhealth <= 0 && global.saxmode && global.sax && oCharacter.sprite_index != sCoreXSAX)
     global.playerhealth = 1
 if (global.playerhealth >= 0 && global.sax && global.saxmode)
@@ -40,6 +41,16 @@ if global.saxmode
 {
     global.mapposx = 2
     global.mapposy = 2
+}
+if (instance_exists(oClient) && global.saxmode)
+{
+    kilBfr = buffer_create(1024, buffer_grow, 1)
+    buffer_seek(kilBfr, buffer_seek_start, 0)
+    buffer_write(kilBfr, buffer_s32, 18)
+    buffer_write(kilBfr, buffer_u8, 72)
+    buffer_poke(kilBfr, 0, buffer_s32, (buffer_tell(kilBfr) - 4))
+    network_send_packet(oClient.socket, kilBfr, buffer_tell(kilBfr))
+    buffer_delete(kilBfr)
 }
 event_user(3)
 room_goto(rm_death)

@@ -10,6 +10,8 @@ if saxmode
     text3 = get_text("ScoreScreen", "SaxRoundOver")
     if (text2a == 0)
         text1a = get_text("ScoreScreen", "SaxTeamFusionWinner")
+    text6 = "TOTAL DEATHS"
+    text6a = string(global.totalDeaths)
 }
 if (state == 0)
 {

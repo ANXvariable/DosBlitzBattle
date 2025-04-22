@@ -308,6 +308,7 @@ switch type_event
                 global.ping = (current_time - ping)
                 break
             case 106:
+                global.totalDeaths = buffer_read(_buffer, buffer_u8)
                 load_character_vars()
                 if (!global.sax)
                     reset_dmap()

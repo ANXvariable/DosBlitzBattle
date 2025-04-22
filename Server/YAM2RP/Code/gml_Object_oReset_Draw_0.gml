@@ -12,5 +12,5 @@ if (alarm[10] > 0)
     draw_set_halign(fa_left)
 }
 draw_set_halign(fa_right)
-draw_text((room_width - 16), 160, ((("deadList: " + string(ds_list_size(oServer.deadList))) + " samusList: ") + string(ds_list_size(oServer.samusList))))
+draw_text((room_width - 16), 160, ((((("global.totalDeaths: " + string(global.totalDeaths)) + " deadList: ") + string(ds_list_size(oServer.deadList))) + " samusList: ") + string(ds_list_size(oServer.samusList))))
 draw_set_halign(fa_left)

@@ -2619,6 +2619,9 @@ switch type_event
                     buffer_delete(savBfr)
                 }
                 break
+            case 72:
+                global.totalDeaths++
+                break
         }
 
         break
